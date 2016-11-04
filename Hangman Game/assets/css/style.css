@@ -38,3 +38,7 @@ body {
 .displayBlur{
 	filter: blur(10px);
 }
+
+.blurOff {
+	filter: none;
+}

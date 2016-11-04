@@ -19,7 +19,7 @@ function reset(){
 document.onkeyup = function(event) {
 
 	var userInput = String.fromCharCode(event.keyCode).toLowerCase(); 
-	// console.log(randomLetter);
+	console.log(randomLetter);
 	// console.log(userInput);
 
 // only letters from a to z entered & letter hasn't been guessed yet to run this if statement
