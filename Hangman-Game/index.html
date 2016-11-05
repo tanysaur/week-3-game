@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman | TWD</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div>
+		<!-- <button id="musicBtn">music:</button>  -->
+	<!-- audio files -->
+		<audio autoplay loop id="theme-music" src="assets/audio/twd-theme-music.mp3" volume="0.05"></audio>
+		
+		<audio id="lizzieFreakout" src="assets/audio/lizzie-freakout.mp3"></audio>
+
+		<audio id="walkerGrowl" src="assets/audio/zombie-growl.mp3"></audio>
+
+	</div>
+	<div class="jumbotron">
+		<h2 class="text-center">Guess this "The Walking Dead" character to save them from the walkers</h2><br>
+		<!-- <h4 class="text-center" id="clickToStart">/Click here to start/</h4> -->
+	</div>
+<!-- left image columns -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="carol" src="assets/images/carol.jpeg" alt="headshot of carol" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="michonne" src="assets/images/michonne.png" alt="headshot of michone" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="eugene" src="assets/images/eugene.png" alt="headshot of eugene" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="maggie" src="assets/images/maggie.png" alt="headshot of maggie" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="rosita" src="assets/images/rosita.jpg" alt="headshot of rosita" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="rick" src="assets/images/rick.jpeg" alt="headshot of rick" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="carl" src="assets/images/carl.jpg" alt="headshot of carl" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="abraham" src="assets/images/abraham.png" alt="headshot of abraham" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="morgan"  src="assets/images/morgan.png" alt="headshot of morgan" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- middle column -->
+			<div class="col-md-6">
+				<div class="container-fluid" id="gameStats">
+					<div>
+						<h3 class="text-center">ESCAPED: <span id="escapedCount"></span></h3>
+						<h3 class="text-center">REMAINING GUESSES: <span id="guessesLeft"></span></h3>
+					</div>
+					<br>
+				
+					<div id="randomWordContainer">
+						<h1 class="text-center">YOU HELPED</h1><br>
+						<h1 id="randomWord" class="text-center"></h1><br>
+						<h1 class="text-center">ESCAPE FROM THE WALKERS!</h1>
+					</div>
+					<br>
+					<h4 class="text-center">LETTERS GUESSED: <br><br>
+							<span id="guessedArr"></span>
+					</h4>
+				</div>
+			</div>
+<!-- right image columns -->				
+			<div class="col-md-3">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="daryl"  src="assets/images/daryl.jpeg" alt="headshot of daryl" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="sasha"  src="assets/images/sasha.jpg" alt="headshot of sasha" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="judith"  src="assets/images/judith.png" alt="headshot of judith" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="tara"  src="assets/images/tara.jpg" alt="headshot of tara" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img  id="glenn" src="assets/images/glenn.jpeg" alt="headshot of glenn" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="aaron"  src="assets/images/aaron.png" alt="headshot of aaron" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="enid"  src="assets/images/enid.jpg" alt="headshot of enid" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img  id="jesus" src="assets/images/jesus.jpg" alt="headshot of jesus" class="displayBlur"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="spencer" src="assets/images/spencer.png" alt="headshot of spencer" class="displayBlur"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- footer -->	
+	<div id="footer">
+	  	<div class="container">
+	  	  <p class="text-muted">2016 Ysa Tan </p>
+	  	</div>
+	</div>
+	
+
+<!-- script path -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	background: url("../images/TWD-wallpaper.jpg");
+	font-family: "Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif
+}
+
+@font-face {
+    font-family: 'Dead Kansas', Arial;
+    src: url("../fonts/Dead-Kansas.ttf");
+}
+
+#gameStats{
+	font-family: 'Dead Kansas';
+}
+
+#randomWord {
+	color: #d00;
+}
+
+#guessedArr, #guessesLeft, #escapedCount {
+	color:#833;
+}
+
+.jumbotron {
+	font-family: 'Dead Kansas';
+	background-color: #833;
+}
+
+.jumbotron h2 {
+	font-size: 46px;
+}
+
+.img-placeholder img{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+	border: 1px solid #d00;
+}
+
+.displayBlur{
+	filter: blur(10px);
+}
+
+.blurOff {
+	filter: none;
+}
+
+
