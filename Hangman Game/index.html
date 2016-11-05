@@ -10,18 +10,17 @@
 </head>
 <body>
 	<div>
-		<button id="musicBtn">music: <span id="audioToggle"></span></button>
-		<audio id="theme-music" autoplay>
-  			
-		<!-- </audio><source src="assets/audio/twd-theme-music.mp3" type="audio/mpeg"> -->
-		<audio id="walkerGrowl">
-  			<source src="assets/audio/zombie-growl.mp3" type="audio/mpeg">
-		</audio>
+		<!-- <button id="musicBtn">music: <audio autoplay loop id="theme-music" src="assets/audio/twd-theme-music.mp3" volume="0.1" type="audio/mpeg"></audio></button>
+		 -->
+		
+		<audio id="lizzie-freakout" src="assets/audio/lizzie-freakout.mp3" type="audio/mpeg"></audio>
+
+		<audio id="walkerGrowl" src="assets/audio/zombie-growl.mp3" type="audio/mpeg"></audio>
 
 	</div>
 	<div class="jumbotron">
-		<h2 class="text-center">Help these "The Walking Dead" characters escape from hungry walkers!</h2><br>
-		<h4 class="text-center" id="clickToStart">/Click here to start/</h4>
+		<h2 class="text-center">Guess this "The Walking Dead" character to save them from the walkers</h2><br>
+		<!-- <h4 class="text-center" id="clickToStart">/Click here to start/</h4> -->
 	</div>
 <!-- left image columns -->
 	<div class="container-fluid">
@@ -30,51 +29,51 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/carol.jpeg"/ class="displayBlur">
+							<img id="carol" src="assets/images/carol.jpeg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="michonne" src="assets/images/michonne.png"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/rick.jpeg"/ class="displayBlur">
+							<img id="eugene" src="assets/images/eugene.png"/ class="displayBlur">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="maggie" src="assets/images/maggie.png"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="rosita" src="assets/images/rosita.jpg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="rick" src="assets/images/rick.jpeg"/ class="displayBlur">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="carl" src="assets/images/carl.jpg"/ class="displayBlur">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="abraham" src="assets/images/abraham.png"/ class="displayBlur">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="morgan"  src="assets/images/morgan.png"/ class="displayBlur">
 						</div>
 					</div>
 				</div>
@@ -104,51 +103,51 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/daryl.jpeg"/ class="displayBlur">
+							<img id="daryl"  src="assets/images/daryl.jpeg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="sasha"  src="assets/images/sasha.jpg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/glenn.jpeg"/ class="displayBlur">
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="judith"  src="assets/images/judith.png"/ class="displayBlur">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="tara"  src="assets/images/tara.jpg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img  id="glenn" src="assets/images/glenn.jpeg"/ class="displayBlur">
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="img-placeholder">
-							<img src="assets/images/200x200.png"/ class="displayBlur">
+							<img id="aaron"  src="assets/images/aaron.png"/ class="displayBlur">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="enid"  src="assets/images/enid.jpg"/ class="displayBlur">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img  id="jesus" src="assets/images/jesus.jpg"/ class="displayBlur">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="img-placeholder">
+							<img id="spencer" src="assets/images/spencer.png"/ class="displayBlur">
 						</div>
 					</div>
 				</div>
