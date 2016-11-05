@@ -1,9 +1,10 @@
 body {
 	background: url("../images/TWD-wallpaper.jpg");
+	font-family: "Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif
 }
 
 @font-face {
-    font-family: 'Dead Kansas';
+    font-family: 'Dead Kansas', Arial;
     src: url("../fonts/Dead-Kansas.ttf");
 }
 
